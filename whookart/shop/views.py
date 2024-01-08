@@ -202,7 +202,7 @@ def checkout(request):
             send_mail(
                 subject,
                 plain_message,
-                'sanjay.thiru.17@gmail.com',  # Replace with your sender email
+                'email',  # Replace with your sender email
                 [order.user.email],  # Sending to the customer's email associated with the order
                 html_message=html_message,
             )
