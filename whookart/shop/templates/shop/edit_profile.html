@@ -1,0 +1,52 @@
+<!-- edit_profile.html -->
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+  Edit Profile | WhooKart
+{% endblock title %}
+{% block content %}
+
+<style>
+  .custom-username-form {
+    
+    background-color: #f0f0f0;
+    padding: 8px;
+    
+}
+
+.custom-password-form {
+    
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+</style>
+
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+  <div class="container">
+      <div class="row">
+          <form method="post">
+              {% csrf_token %}
+              <h3>Edit Profile</h3>
+              <br>
+              <div class="custom-profile-form">
+                  <label for="id_username"><h4>Username* : &nbsp;  ({{ request.user.username |capfirst }})</h4></label>
+                
+                  <input type="text" name="username" id="id_username" class="form-control" placeholder="Enter Username">
+                  <br>
+                  <label for="id_email"><h4>Email : &nbsp;  ({{ request.user.email }})</h4></label>
+                 
+                  <input type="email" name="email" id="id_email" class="form-control" placeholder="Enter Email">
+              </div>
+              <hr>
+              <h3>Change Password*</h3>
+              <br>
+              <div class="custom-password-form">
+                  {{ password_form.as_p }}
+                  <br>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
+{% endblock content %}

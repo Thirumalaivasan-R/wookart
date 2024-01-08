@@ -1,0 +1,57 @@
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+  Order Confimation | WhooKart
+{% endblock title %}
+{% block content %}
+
+<style>
+    .container{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .confirmation-box {
+      background-color: #f8f9fa; /* Background color */
+      border-radius: 10px; /* Rounded corners */
+      padding: 30px; /* Padding for content */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+
+      .success-message {
+        color: #27ae60; /* Green color for success */
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        border-color: #b8bfc2;
+    }
+    footer {
+      
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+</style>
+
+<div class="container" style="margin-top:70px;" >
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="confirmation-box">
+        <h4 class="success-message">Hooray! Order Confirmation</h4>
+        <hr>
+        <p>Your order has been placed successfully!</p>
+        
+    </div>
+        
+      </div>
+    </div>
+</div>
+
+
+{% endblock content %}

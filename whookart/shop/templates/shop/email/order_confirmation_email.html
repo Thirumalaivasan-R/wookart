@@ -1,0 +1,49 @@
+<!-- templates/email/order_confirmation.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        /* Add your CSS styles for the email template */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <h2>Order Confirmation</h2>
+    <p>Hello {{ order.user.username }},</p>
+    
+    <p>Your order (Order ID: {{ order.id }}) has been successfully placed. Below are the details:</p>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Item Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ordered_product in order.orderedproduct_set.all %}
+            <tr>
+                <td>{{ ordered_product.product.name }}</td>
+                <td>{{ ordered_product.quantity }}</td>
+                <td>Rs. {{ ordered_product.item_price }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2"><strong>Total Price</strong></td>
+                <td>Rs. {{ total_price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Thank you for shopping with us!</p>
+    <!-- Add any additional information or styling as needed -->
+</body>
+</html>

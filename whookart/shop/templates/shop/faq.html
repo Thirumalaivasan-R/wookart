@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - Whookart</title>
+  <style>/* Basic styling */
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+    }
+    
+    header h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      color: #333;
+    }
+    
+    main {
+      padding: 40px 0;
+    }
+    
+    section {
+      margin-bottom: 60px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    .faq-item {
+      margin-bottom: 30px;
+    }
+    
+    .question {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .answer {
+      color: #666;
+    }
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Welcome to Whookart</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'collections' %}">Products</a></li>
+          <li><a href="{% url 'faq' %}">FAQ</a></li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="faq container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3 class="question">How can I track my order?</h3>
+        <p class="answer">"When your order is processed and ready for shipment, we'll promptly send you a confirmation email containing all the essential details of your purchase. This email will include a convenient tracking link, allowing you to monitor the journey of your package in real-time. Just a simple click on the provided link will keep you updated on your order's status, from dispatch to delivery. At Whookart, we prioritize your convenience and aim to keep you informed every step of the way through our email notifications."</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="question">What payment methods do you accept?</h3>
+        <p class="answer">
+
+          "At Whookart, we currently accept Cash on Delivery (COD) as the sole payment method. We are working on introducing more payment options in the near future for added convenience. Stay tuned for updates on our expanding payment methods!"</p>
+      </div>
+      <!-- Add more FAQ items as needed -->
+    </section>
+
+    <!-- Other sections or content can be added here -->
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Whookart. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

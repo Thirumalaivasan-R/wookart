@@ -1,0 +1,40 @@
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+  Place order | WhooKart
+{% endblock title %}
+{% block content %}
+  <section class="bg-light py-4 my-5" style="min-height:600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3">Delivery Details</h4>
+            <hr style="border-color:#b8bfc2;">
+          </div>
+        
+            
+            <form method="post" action="{% url 'checkout' %}">
+              {% csrf_token %}
+              
+              <div class="mb-4">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="Enter Address" required>
+              </div>
+             
+              <div class="mb-4">
+              <label for="phone_number">Phone Number:</label>
+              <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="Enter Phone number" required>
+              </div>
+              
+              <div class="mb-4">
+              <label for="cash_on_delivery">Cash on Delivery</label>
+              <input type="radio" id="cash_on_delivery" name="delivery_mode"  value="cash_on_delivery" checked>
+              </div>
+              <div class="mb-4">
+              <input type="submit" class="btn btn-primary" value="Place Order">
+              </div>
+            </form>
+
+          </div>
+          </div>
+        </section>
+{% endblock content %}

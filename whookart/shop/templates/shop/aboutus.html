@@ -1,0 +1,182 @@
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+{% block title %}
+About us | Whookart
+{% endblock title %}
+
+{% block content %}
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          
+          <section class="about container">
+            <div class="content">
+              <h2>Who We Are</h2>
+              <p>"We, at Whookart, are not just a brand but a diverse online marketplace redefining the way you shop. Our shelves boast an extensive array of products, from cutting-edge mobile phones and sleek laptops to essential groceries and much more. Our mission is to curate a seamless and unparalleled shopping experience, offering you the convenience of finding everything you need in one place. We believe in quality, affordability, and the delight of discovering the latest trends and essentials with every click. Explore our wide selection and embark on a shopping journey that transcends boundaries."
+
+      
+      
+              </p>
+            </div>
+          </section>
+      
+          <section class="what-we-do container">
+            <div class="content">
+              <h2>What We Do</h2>
+              <p>"At Whookart, we pride ourselves on offering an expansive array of products, catering to your every need. We specialize in providing irresistible fashion choices, cutting-edge technology with our range of mobiles and laptops, and the convenience of essential groceries. Our commitment lies in delivering not just products, but an experience—a constant flow of new arrivals and unbeatable prices that redefine your shopping expectations. We curate collections that blend style, functionality, and affordability, ensuring that every purchase is a statement of value and satisfaction. With Whookart, expect nothing less than a journey filled with discoveries and unbeatable deals that elevate your shopping experience.</p>
+            </div>
+          </section>
+      
+          <section class="where-we-are container">
+            <div class="content">
+              <h2>Where We Are</h2>
+              <p>Whookart Headquarters:  <br>
+                123 Market Street, <br>
+                AGS Colony, Velachery, <br>
+                Tamilnadu, Chennai - 600042</p>
+            </div>
+          </section>
+      
+          <section class="founders container">
+            <div class="content">
+              <div class="founder">
+                <img src="{% static 'images/founder1.jpg' %}" alt="Founder 1">
+                <h6>Thirumalaivasan</h6>
+              </div>
+              <div class="founder">
+                <img src="{% static 'images/founder2.jpg' %}" alt="Founder 2">
+                <h6>Rohith</h6>
+              </div>
+              <div class="founder">
+                <img src="{% static 'images/founder3.jpg' %}" alt="Founder 2">
+                <h6>Lingeswaran</h6>
+              </div>
+              <div class="founder">
+                <img src="{% static 'images/founder4.jpg' %}" alt="Founder 2">
+                <h6>Santhosh</h6>
+              </div>
+            </div>
+          </section>
+
+        <style>
+
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+          }
+          
+          .container {
+            width: 80%;
+            margin: 0 auto;
+          }
+          
+          header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+          }
+          
+          header h1 {
+            text-align: center;
+            color: #333;
+          }
+          
+          nav ul {
+            list-style: none;
+            text-align: center;
+            margin-top: 20px;
+          }
+          
+          nav ul li {
+            display: inline;
+            margin-right: 20px;
+          }
+          
+          nav ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s ease;
+          }
+          
+          nav ul li a:hover {
+            color: #333;
+          }
+          
+          section {
+            margin-bottom: 60px;
+            text-align: center;
+          }
+          
+          h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+          }
+          
+          p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            
+          }
+          
+          /* Unique Styling */
+          
+          .about {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+          }
+          
+          .what-we-do {
+            background-color: #fcfcfc;
+            padding: 60px 20px;
+          }
+          
+          .where-we-are {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+          }
+          
+          .content {
+            max-width: 700px;
+            margin: 0 auto;
+          }
+
+          /* Additional styling for founders section */
+.founders {
+  background-color: #fcfcfc;
+  padding: 60px 20px;
+}
+
+.founders .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.founder {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.founder img {
+  width: 120px; 
+  height: auto;
+  border-radius: 60%; 
+  margin-bottom: 10px;
+}
+
+          </style>
+        
+      
+      </div>
+    </div>
+  </div>
+</section>
+ 
+{% endblock content %}
